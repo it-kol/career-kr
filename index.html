@@ -144,6 +144,11 @@ tr:last-child td{border-bottom:none}
 .shot{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .shot img{border-radius:0;width:100%;display:block}
 .shot .cap{padding:10px 16px;font-size:13px;color:var(--sub);font-weight:600}
+.shot img{cursor:zoom-in}
+.shot img:hover{opacity:.92}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(10,15,30,.88);z-index:100;align-items:center;justify-content:center;cursor:zoom-out;padding:24px}
+#lightbox img{max-width:94vw;max-height:90vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#lightbox .hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#c9d6ef;font-size:13px;background:rgba(255,255,255,.12);padding:6px 16px;border-radius:999px}
 .shot video{width:100%;display:block}
 
 /* ===== install / free vs pro ===== */
@@ -212,7 +217,7 @@ details[open] summary{margin-bottom:8px}
     <span class="badge">🤝 커리어 크리에이터 협업 참고 자료</span>
     <h1>Immersive Translate<span class="x">×</span>커리어 크리에이터 협업 페이지</h1>
     <div class="aud"><b>외국계 취업 준비생</b> · <b>외국계 재직자</b> · <b>디지털노마드</b> 팬츠를 가진 크리에이터 대상</div>
-    <p class="lead">외국계 JD 읽기, 영문 이력서 쓰기, 영어 면접 실시간 통역, 하루 20통 영문 이메일, 글로벌 회의 이중 자막까지 —
+    <p class="lead">외국계 JD 읽기, 영문 이력서 쓰기, 영어 면접 실시간 통역, 영문 이메일 AI 회신, 글로벌 회의 이중 자막까지 —
     커리어의 언어 장벽을 하나의 툴로 해결하는 AI 이중 번역 확장 프로그램입니다. <b>기본 기능은 완전 무료</b>.</p>
     <div class="hero-cta">
       <a class="btn btn-white" href="#brief">제품 브리핑 보기</a>
@@ -293,7 +298,7 @@ details[open] summary{margin-bottom:8px}
       <tr>
         <td class="feat-name">이메일 AI 회신<small>영문 메일 읽기 + 답장</small></td>
         <td class="imp star">★ 필수</td>
-        <td>하루 평균 20통의 영어 업무 메일. 열면 자동 한국어 번역(원문 병기) + <b>영어 회신 초안 자동 생성</b>까지 한 화면에서.</td>
+        <td>쏟아지는 영어 업무 메일. 열면 자동 한국어 번역(원문 병기) + <b>영어 회신 초안 자동 생성</b>까지 한 화면에서.</td>
         <td>회신 초안 생성은 Pro. "페이지 이동 없이 답장 끝"이 핵심 메시지.</td>
       </tr>
       <tr>
@@ -400,8 +405,8 @@ details[open] summary{margin-bottom:8px}
 
   <div class="epi">
     <div class="epi-head"><span class="epi-num">에피소드 2 · 재직자 편</span><span class="for work">💼 재직자 · 디지털노마드 팬츠</span></div>
-    <h3>「영어 이메일 20통, 회의는 실시간 통역으로 — 외국계 직장인의 하루 루틴」</h3>
-    <div class="hook"><b>오픈 훅 방향 (예시, 각색 자유):</b> "아침에 영어 메일 20통 받는 직장인의 비밀" · "영어 회의에서 아무 말 못 하다가 퇴근 늦은 날, 이거 하나로 끝"</div>
+    <h3>「쏟아지는 영어 이메일, 회의는 실시간 통역으로 — 외국계 직장인의 하루 루틴」</h3>
+    <div class="hook"><b>오픈 훅 방향 (예시, 각색 자유):</b> "영어 메일에 파묻히는 외국계 직장인의 하루" · "영어 회의에서 아무 말 못 하다가 퇴근 늦은 날, 이거 하나로 끝"</div>
     <ol class="beats">
       <li><b class="t">① 공감 — 외국계 직장인의 언어 세금</b><small>아침마다 쏟아지는 영문 메일, 빨리 말하는 외국인 동료, 번역하다 흐름을 놓치는 Slack. 하루 업무 시간의 30%가 언어 처리에 사라지는 현실.</small></li>
       <li><b class="t">② 반전 — 하나의 확장으로 묶는 하루</b><small>메일 열면 한국어 번역 + 영어 회신 초안 자동 생성 → Zoom 회의는 실시간 한영 이중 자막 → 사내 위키·Slack은 흐름 유지하며 이중 번역 → 회의 채팅은 입력 번역으로 영어 댓글. 각 장면 화면 녹화 3~5초.</small></li>
@@ -431,7 +436,7 @@ details[open] summary{margin-bottom:8px}
     <div class="card idea">
       <h4>💼 재직자 · 노마드 편 아이디어</h4>
       <ol>
-        <li><b>아침 이메일 루틴:</b> 영문 메일 20통 → 한국어 요약 + AI 회신 초안으로 30분 줄이기 (전후 비교)</li>
+        <li><b>아침 이메일 루틴:</b> 쏟아지는 영문 메일을 한국어 요약 + AI 회신 초안으로 빠르게 처리하는 루틴 (전후 비교)</li>
         <li><b>Zoom 회의 이중 자막 세팅법:</b> 브라우저 버전 참여부터 자막 켜기까지 1분 튜토리얼</li>
         <li><b>사내 위키·Slack 한국어로 읽기:</b> 다국어 팀 채널을 흐름 끊기지 않고 읽는 법</li>
         <li><b>본사 정책 PDF 번역:</b> 레이아웃 유지되는 이중 언어 PDF 다운로드 과정 소개</li>
@@ -445,8 +450,8 @@ details[open] summary{margin-bottom:8px}
 <section id="packs">
   <div class="sec-head">
     <div class="kicker">Fan Resource Packs</div>
-    <h2>📦 팬 공유용 자료팩 — 댓글·고정 댓글에 활용</h2>
-    <p class="desc">아래 자료팩을 영상 댓글·커뮤니티·프로필 링크에 걸어주세요. 팬에게는 실질적 가이드, 채널에는 체류 시간과 신뢰도가 돌아옵니다.</p>
+    <h2>📦 팬 공유용 자료팩 — 선택 사항</h2>
+    <p class="desc">필수는 아닙니다 — 팬츠에게 도움이 될 만하다고 판단되면 활용하세요. 영상 댓글·커뮤니티·프로필 링크에 걸면 팬에게는 실질적 가이드가, 채널에는 체류 시간과 신뢰도가 돌아옵니다.</p>
   </div>
   <div class="pack-grid">
     <a class="pack pack-job" href="https://kol-guide.github.io/jobseeker-guide/" target="_blank" rel="noopener">
@@ -465,15 +470,15 @@ details[open] summary{margin-bottom:8px}
   <div class="shots" style="margin-top:18px">
     <div class="shot">
       <img src="https://kol-guide.github.io/jobseeker-guide/media/linkedin-screenshot.webp" alt="영어 JD·LinkedIn 한영 대조 번역 화면" loading="lazy"/>
-      <div class="cap">📖 영어 JD·Glassdoor 한영 대조 화면 (취업 편)</div>
+      <div class="cap">📖 영어 JD·Glassdoor 한영 대조 화면 (취업 편) · 클릭하면 확대</div>
     </div>
     <div class="shot">
       <img src="https://kol-guide.github.io/jobseeker-guide/media/ai-reply-screenshot.png" alt="영문 이메일 AI 회신 초안 화면" loading="lazy"/>
-      <div class="cap">✉️ 영문 이메일 → 한국어 이해 + 영어 회신 초안</div>
+      <div class="cap">✉️ 영문 이메일 → 한국어 이해 + 영어 회신 초안 · 클릭하면 확대</div>
     </div>
     <div class="shot">
       <img src="https://kol-guide.github.io/jobseeker-guide/media/youtube-subtitle.png" alt="유튜브 한영 이중 자막 화면" loading="lazy"/>
-      <div class="cap">🎬 유튜브·교육 영상 한영 이중 자막</div>
+      <div class="cap">🎬 유튜브·교육 영상 한영 이중 자막 · 클릭하면 확대</div>
     </div>
   </div>
   <div class="shots" style="margin-top:16px">
@@ -483,7 +488,7 @@ details[open] summary{margin-bottom:8px}
     </div>
     <div class="shot">
       <img src="https://kol-guide.github.io/jobseeker-guide/media/input-translate.gif" alt="입력창 번역 동작 화면" loading="lazy"/>
-      <div class="cap">⌨️ 입력 번역 — 한국어 작성 → 스페이스 3번 → 영어 변환</div>
+      <div class="cap">⌨️ 입력 번역 — 한국어 작성 → 스페이스 3번 → 영어 변환 · 클릭하면 확대</div>
     </div>
   </div>
 </section>
@@ -531,12 +536,11 @@ details[open] summary{margin-bottom:8px}
     <div class="kicker">Collaboration</div>
     <h2>🤝 협업 프로세스</h2>
   </div>
-  <div class="flow">
+  <div class="flow" style="grid-template-columns:repeat(4,1fr)">
     <div class="fstep"><b>1. 브리핑 확인</b><small>이 페이지 열람 + 에피소드 선택</small></div>
     <div class="fstep"><b>2. 콘텐츠 기획</b><small>각색 방향 자율 (순서만 유지)</small></div>
-    <div class="fstep"><b>3. (선택) 초안 공유</b><small>스크립트 사전 검토 가능</small></div>
+    <div class="fstep"><b>3. 스크립트 공유 (필수)</b><small>게시 전 초안 사전 검토</small></div>
     <div class="fstep"><b>4. 게시</b><small>고정 댓글 3종 필수 ↓</small></div>
-    <div class="fstep"><b>5. 데이터 공유</b><small>게시 7일 후 조회·좋아요·저장 스크린샷</small></div>
   </div>
 
   <div class="pinbox">
@@ -546,7 +550,7 @@ details[open] summary{margin-bottom:8px}
       <div class="pin"><b>2️⃣ 구독자 전용 10% 할인 코드</b><small>Pro 안내 시에만 함께 노출 (무료 기능 안내가 우선)</small></div>
       <div class="pin"><b>3️⃣ 주간 이용권 추첨</b><small>댓글 참여자 중 Pro 7일 체험권 추첨 — 참여율 상승 효과</small></div>
     </div>
-    <p style="margin-top:14px;font-size:13px;color:#c9d6ef">📌 게시물은 <b style="color:#fff">30일간 유지</b>해 주세요. 팬 자료팩 링크(위 📦 섹션)를 댓글이나 프로필에 함께 걸어주시면 더 좋습니다.</p>
+    <p style="margin-top:14px;font-size:13px;color:#c9d6ef">📌 게시물은 <b style="color:#fff">최소 6개월간 유지</b>해 주세요. 팬 자료팩(위 📦 섹션)은 선택 사항입니다 — 필요하다고 판단되는 채널에서만 활용해 주세요.</p>
   </div>
 </section>
 
@@ -577,6 +581,16 @@ function switchAud(k){
   if(k==='job'){j.classList.add('show');w.classList.remove('show');bj.className='on-job';bw.className='';}
   else{w.classList.add('show');j.classList.remove('show');bw.className='on-work';bj.className='';}
 }
+</script>
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" src="" alt=""/><div class="hint">아무 곳이나 클릭하면 닫힙니다</div></div>
+<script>
+document.querySelectorAll('.shot img').forEach(function(img){
+  img.addEventListener('click', function(e){
+    e.stopPropagation();
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').style.display = 'flex';
+  });
+});
 </script>
 </body>
 </html>
